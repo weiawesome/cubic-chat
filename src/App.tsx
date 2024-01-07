@@ -31,7 +31,7 @@ const RotatingCube: React.FC = () => {
         return () => {
             clearInterval(colorInterval);
         };
-    }, []); // Empty dependency array to run the effect only once
+    }, []);
 
     useFrame(() => {
         if (cubeRef.current) {
@@ -46,9 +46,6 @@ const RotatingCube: React.FC = () => {
         </Box>
     );
 };
-
-
-
 
 const App: React.FC = () => {
     const [content,setContent]=useState("")
